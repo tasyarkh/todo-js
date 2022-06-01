@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root {
+    --black : black;
+    --white : white;
+    --one : #1A1A40;
+    --two : #270082;
+    --three : #7A0BC0;
+    --four : #FA58B6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--black);
+    color: var(--white);
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+ h1 {
+    font-size: 2.5rem;
+    background-image: linear-gradient(var(--four), var(--three));
+    margin-bottom: 3rem;
+    margin-top: 20px;
+    margin-left: 20px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+#new-task {
+    display: flex;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+
+
+#task-input {
+   
+    flex: 1 1 0%;
+    background-image: linear-gradient(to left, var(--three), var(--two));
+    padding: 1rem;
+    border-radius: 10px;
+    margin-right: 1rem;
+    color: var(--four);
+    font-size: 1.25rem;
+}
+
+#task-input::placeholder {
+    color: var(--four);
+    opacity: 0.5;
+}
+
+#task-submit {
+    color: var(--four);
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-image: linear-gradient(to bottom, var(--four),var(--three));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 4px solid var(--two);
+    border-radius: 5px;
+}
+
+#task-submit:hover {
+    opacity: 0.8;
+    background-image: linear-gradient(to right, var(--four),var(--three));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#task-submit:active {
+    opacity: 0.6;
+}
+
+main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list {
+    padding: 1rem;
+    /* border: 2px solid var(--two); */
+    border-radius: 3px;
+}
+
+.task-list h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--four);
+    margin-bottom: 1rem;
+    margin-left: 310px;
+}
+
+i{
+    font-size: 1.9rem;
+    color: var(--four);
+    bottom: 45px;
+    position: relative;
+    left: 450px;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--one);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content {
+    flex: 1 1 0%;
+}
+
+#tasks .task .content .text {
+    color: var(--four);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only) {
+    color: var(--three);
+}
+
+#tasks .task .action {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .action button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.task .action button:hover {
+    opacity: 0.9;
+}
+
+.task .action button:active {
+    opacity: 0.6;
+}
+
+.task .action .edit {
+   color: var(--four);
+}
+
+.task .action .delete {
+    color: var(--three);
+}
